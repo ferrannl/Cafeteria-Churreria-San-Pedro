@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
         content="Cafetería Churrería San Pedro in El Sauzal, Tenerife – churros, great coffee and beautiful views.">
+
+  <!-- Source - https://stackoverflow.com/a
+       Posted by Sandy Al Akhras, modified by community. See post 'Timeline' for change history
+       Retrieved 2025-12-01, License - CC BY-SA 4.0 -->
+  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
@@ -294,6 +300,11 @@
       color: #555;
     }
 
+    .vr-frame {
+      width: 100%;
+      height: 260px;
+    }
+
     .visit-grid {
       display: grid;
       grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
@@ -540,11 +551,12 @@
     </div>
     <div class="hero-image">
       <div class="hero-card">
-        <img src="cafe1.jpg"
-             alt="Glass of café con leche at a white outdoor table">
+        <!-- Hero uses the finished iced coffee (cafe2.jpg) -->
+        <img src="cafe2.jpg"
+             alt="Coffee with ice cube inside the glass on a white table">
       </div>
       <div class="hero-note">
-        Your perfect café con leche with ice on the side
+        Your perfect iced café con leche
       </div>
     </div>
   </section>
@@ -602,8 +614,8 @@
         <div class="specialty">
           <h3>Café con leche</h3>
           <p>
-            Smooth coffee with milk, served in a glass as pictured – have it
-            hot, or enjoy it the “San Pedro” way with an ice cube on the side.
+            Smooth coffee with milk, served in a glass – hot, or the
+            “San Pedro” way with a separate glass of ice.
           </p>
         </div>
         <div class="specialty">
@@ -627,24 +639,28 @@
     <section id="gallery-en">
       <h2>Coffee moments at San Pedro</h2>
       <p class="lead">
-        A few snapshots of how we like our coffee: relaxed, sunny
-        and enjoyed slowly.
+        A few snapshots of how we like our coffee: relaxed, sunny,
+        and sometimes in full 360°.
       </p>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="cafe1.jpg"
-               alt="Coffee in a glass on a white outdoor table with sunglasses nearby">
-          <div class="gallery-caption">Café con leche on the terrace.</div>
+               alt="Coffee with a separate glass holding a large ice cube">
+          <div class="gallery-caption">Hot coffee with ice served on the side.</div>
         </div>
         <div class="gallery-item">
           <img src="cafe2.jpg"
-               alt="Coffee and a separate glass with a large ice cube">
-          <div class="gallery-caption">Hot coffee, ice on the side – your own iced latte.</div>
+               alt="Coffee with an ice cube inside the glass">
+          <div class="gallery-caption">Your iced café con leche ready to enjoy.</div>
         </div>
         <div class="gallery-item">
-          <img src="cafe3.jpg"
-               alt="Coffee poured over a single ice cube in a glass">
-          <div class="gallery-caption">Stir, cool down and enjoy the view.</div>
+          <!-- 360° viewer -->
+          <a-scene embedded class="vr-frame">
+            <a-sky src="cafe3.jpg" rotation="0 -90 0"></a-sky>
+          </a-scene>
+          <div class="gallery-caption">
+            360° view captured at Cafetería Churrería San Pedro.
+          </div>
         </div>
       </div>
     </section>
@@ -718,11 +734,11 @@
     </div>
     <div class="hero-image">
       <div class="hero-card">
-        <img src="cafe1.jpg"
-             alt="Vaso de café con leche en una mesa blanca en la terraza">
+        <img src="cafe2.jpg"
+             alt="Café con leche con un cubito de hielo dentro del vaso">
       </div>
       <div class="hero-note">
-        Tu café con leche perfecto con hielo aparte
+        Tu café con leche frío, listo para disfrutar
       </div>
     </div>
   </section>
@@ -780,8 +796,8 @@
         <div class="specialty">
           <h3>Café con leche</h3>
           <p>
-            Café suave con leche, servido en vaso como en las fotos – tómalo
-            caliente o al estilo “San Pedro”, con un cubito de hielo aparte.
+            Café suave con leche, servido en vaso: caliente o al estilo “San Pedro”,
+            con un vaso aparte lleno de hielo.
           </p>
         </div>
         <div class="specialty">
@@ -806,23 +822,26 @@
       <h2>Momentos de café en San Pedro</h2>
       <p class="lead">
         Algunas instantáneas de cómo nos gusta el café: relajado, al sol
-        y sin prisas.
+        y a veces en 360°.
       </p>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="cafe1.jpg"
-               alt="Café con leche en vaso sobre una mesa blanca con gafas de sol">
-          <div class="gallery-caption">Un café con leche en la terraza.</div>
-        </div>
-        <div class="gallery-item">
-          <img src="cafe2.jpg"
                alt="Café y vaso aparte con un cubito de hielo grande">
           <div class="gallery-caption">Café caliente, hielo aparte – tu propio café con hielo.</div>
         </div>
         <div class="gallery-item">
-          <img src="cafe3.jpg"
-               alt="Café vertido sobre un cubito de hielo en un vaso">
-          <div class="gallery-caption">Remueve, deja enfriar y disfruta de las vistas.</div>
+          <img src="cafe2.jpg"
+               alt="Café con leche con un cubito de hielo dentro del vaso">
+          <div class="gallery-caption">Café con leche frío listo para tomar.</div>
+        </div>
+        <div class="gallery-item">
+          <a-scene embedded class="vr-frame">
+            <a-sky src="cafe3.jpg" rotation="0 -90 0"></a-sky>
+          </a-scene>
+          <div class="gallery-caption">
+            Vista 360° capturada en Cafetería Churrería San Pedro.
+          </div>
         </div>
       </div>
     </section>
@@ -859,7 +878,7 @@
             desde Santa Cruz, La Laguna y Puerto de la Cruz.
           </p>
           <p>
-            <a href="https://maps.google.com/?q=Cafeter%C3%ADa+Churrer%C3%ADa+San+Pedro+El+Sauzal"
+            <a href="https://maps.google.com/?q=Cafeter%C3%ADa+Churrer%C3%ADa+Churrer%C3%ADa+San+Pedro+El+Sauzal"
                target="_blank" rel="noopener">
               Abrir en Google Maps →
             </a>
@@ -896,11 +915,11 @@
     </div>
     <div class="hero-image">
       <div class="hero-card">
-        <img src="cafe1.jpg"
-             alt="Glas mit Café con leche auf einem weißen Tisch">
+        <img src="cafe2.jpg"
+             alt="Glas mit Café con leche und Eiswürfel im Glas">
       </div>
       <div class="hero-note">
-        Dein perfekter Café con leche mit Eiswürfel im Extra-Glas
+        Dein perfekt gekühlter Café con leche
       </div>
     </div>
   </section>
@@ -959,8 +978,8 @@
         <div class="specialty">
           <h3>Café con leche</h3>
           <p>
-            Sanfter Kaffee mit Milch, im Glas serviert – heiß genießen
-            oder auf „San-Pedro-Art“ mit Eiswürfel im Extra-Glas.
+            Sanfter Kaffee mit Milch, im Glas serviert – heiß oder auf
+            „San-Pedro-Art“ mit einem Glas voller Eiswürfel separat.
           </p>
         </div>
         <div class="specialty">
@@ -986,23 +1005,30 @@
       <h2>Kaffeemomente im San Pedro</h2>
       <p class="lead">
         Ein paar Eindrücke, wie wir unseren Kaffee am liebsten genießen:
-        entspannt, sonnig und ohne Eile.
+        entspannt, sonnig – und manchmal in 360°.
       </p>
       <div class="gallery-grid">
         <div class="gallery-item">
           <img src="cafe1.jpg"
-               alt="Café con leche in einem Glas auf einem weißen Tisch mit Sonnenbrille">
-          <div class="gallery-caption">Café con leche auf der Terrasse.</div>
+               alt="Kaffee und separates Glas mit großem Eiswürfel">
+          <div class="gallery-caption">
+            Heißer Kaffee, Eiswürfel im Extra-Glas – ganz nach deinem Geschmack.
+          </div>
         </div>
         <div class="gallery-item">
           <img src="cafe2.jpg"
-               alt="Kaffee und separates Glas mit großem Eiswürfel">
-          <div class="gallery-caption">Heißer Kaffee, Eiswürfel extra – dein eigener Eiskaffee.</div>
+               alt="Café con leche mit Eiswürfel im Glas">
+          <div class="gallery-caption">
+            Gekühlter Café con leche, bereit zum Genießen.
+          </div>
         </div>
         <div class="gallery-item">
-          <img src="cafe3.jpg"
-               alt="Kaffee über einen Eiswürfel in ein Glas gegossen">
-          <div class="gallery-caption">Umrühren, abkühlen lassen und die Aussicht genießen.</div>
+          <a-scene embedded class="vr-frame">
+            <a-sky src="cafe3.jpg" rotation="0 -90 0"></a-sky>
+          </a-scene>
+          <div class="gallery-caption">
+            360°-Panoramablick in der Cafetería Churrería San Pedro.
+          </div>
         </div>
       </div>
     </section>
