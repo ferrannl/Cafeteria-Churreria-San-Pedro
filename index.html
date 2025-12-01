@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafetería Churrería San Pedro – El Sauzal, Tenerife</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="Cafetería Churrería San Pedro in El Sauzal, Tenerife – family café since 1978 with fresh churros, great coffee and beautiful views.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    :root {
+      --bg: #f9f5f0;
+      --accent: #c27b48;
+      --accent-dark: #8b5429;
+      --text: #333333;
+      --light: #ffffff;
+      --shadow: 0 10px 25px rgba(0,0,0,0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(249,245,240,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.75rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 1.5rem auto 2.5rem;
+      padding: 1.5rem 1rem 0;
+      display: grid;
+      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: clamp(2.2rem, 3vw + 1rem, 3rem);
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-text h1 span {
+      color: var(--accent);
+    }
+
+    .hero-text p {
+      margin-bottom: 1.25rem;
+      font-size: 0.98rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(194,123,72,0.1);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      padding: 0.7rem 1.3rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--light);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      border-color: rgba(0,0,0,0.1);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent-dark);
+      background: rgba(194,123,72,0.05);
+    }
+
+    .hero-image {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--light);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-note {
+      position: absolute;
+      bottom: -0.9rem;
+      left: 0.6rem;
+      background: var(--light);
+      border-radius: 999px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.75rem;
+      box-shadow: var(--shadow);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto 3rem;
+      padding: 0 1rem 2.5rem;
+    }
+
+    section {
+      margin-top: 2.5rem;
+    }
+
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    section p.lead {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.2rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,1fr);
+      gap: 1.7rem;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.4rem;
+      box-shadow: var(--shadow);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .chip {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.04);
+    }
+
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .specialty {
+      padding: 1rem 1rem 1.1rem;
+      border-radius: var(--radius);
+      background: var(--light);
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+    }
+
+    .specialty h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--light);
+    }
+
+    .gallery-item img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      padding: 0.5rem 0.8rem 0.7rem;
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+    }
+
+    .hours-table td {
+      padding: 0.2rem 0;
+    }
+
+    .hours-table td:first-child {
+      font-weight: 600;
+      padding-right: 0.7rem;
+    }
+
+    footer {
+      border-top: 1px solid rgba(0,0,0,0.06);
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #666;
+      background: #f2ebe4;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
+        gap: 0.3rem;
+      }
+      .nav-links {
+        gap: 1rem;
+      }
+      .hero, .two-col, .visit-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding-top: 1rem;
+      }
+      .hero-image {
+        order: -1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Cafetería Churrería San Pedro</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#specialties">Specialties</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#visit">Visit Us</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-badge">Desde 1978 · El Sauzal, Tenerife</div>
+    <h1>Fresh <span>churros</span>, ocean views & café con leche</h1>
+    <p>
+      Cafetería Churrería San Pedro is a cosy, family-run spot in El Sauzal,
+      known for crispy churros, rich coffee and a relaxed local atmosphere.
+    </p>
+    <div class="hero-actions">
+      <a href="#specialties" class="btn-primary">See our favourites ☕</a>
+      <a href="#visit" class="btn-ghost">Plan your visit →</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <div class="hero-card">
+      <img src="images/cafe1.jpg"
+           alt="Glass of café con leche at a white outdoor table">
+    </div>
+    <div class="hero-note">
+      Your perfect café con leche with ice on the side
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="about">
+    <div class="two-col">
+      <div>
+        <h2>About San Pedro</h2>
+        <p class="lead">
+          Since the late 1970s, San Pedro has been serving fresh churros and
+          classic Canarian coffee drinks to neighbours and visitors in
+          Avenida Inmaculada Concepción.
+        </p>
+        <p>
+          Step inside for a warm, friendly atmosphere, or sit on the terrace
+          and enjoy the views over El Sauzal and the north coast of Tenerife.
+          It’s a favourite stop for breakfast, a mid-morning café con leche,
+          or a relaxed evening drink with snacks.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Family-run</span>
+          <span class="chip">Local favourite</span>
+          <span class="chip">Churros & tapas</span>
+          <span class="chip">Great coffee</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Good to know</h3>
+        <p><strong>Address:</strong><br>
+          Av. Inmaculada Concepción 4,<br>
+          38360 El Sauzal, Santa Cruz de Tenerife, Spain
+        </p>
+        <p><strong>Phone:</strong> <a href="tel:+34922105000">+34 922 10 50 00</a></p>
+        <p><strong>Price range:</strong> approx. €1 – €10 per person</p>
+        <p><strong>Atmosphere:</strong> relaxed, friendly, popular with locals</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="specialties">
+    <h2>Our specialties</h2>
+    <p class="lead">
+      Whether you come for breakfast, a quick coffee or an evening snack,
+      these are the classics you shouldn’t miss.
+    </p>
+    <div class="specialties-grid">
+      <div class="specialty">
+        <h3>Churros recién hechos</h3>
+        <p>
+          Light and crispy churros, fried to order and served hot –
+          perfect with coffee, hot chocolate or on their own with sugar.
+        </p>
+      </div>
+      <div class="specialty">
+        <h3>Café con leche</h3>
+        <p>
+          Smooth coffee with milk, served in a glass as pictured – have it
+          hot, or enjoy it the “San Pedro” way with an ice cube on the side.
+        </p>
+      </div>
+      <div class="specialty">
+        <h3>Barraquito</h3>
+        <p>
+          Traditional layered Canarian coffee with condensed milk,
+          Licor 43 and a touch of cinnamon and lemon. Sweet, creamy
+          and very Tenerife.
+        </p>
+      </div>
+      <div class="specialty">
+        <h3>Sandwiches & snacks</h3>
+        <p>
+          Generous sandwiches (including chicken), simple tapas and
+          small bites to share – ideal with a cold drink on the terrace.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Coffee moments at San Pedro</h2>
+    <p class="lead">
+      A few snapshots of how we like our coffee: relaxed, sunny
+      and enjoyed slowly.
+    </p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="images/cafe1.jpg"
+             alt="Coffee in a glass on a white outdoor table with sunglasses nearby">
+        <div class="gallery-caption">Café con leche on the terrace.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/cafe2.jpg"
+             alt="Coffee and separate glass with a large ice cube">
+        <div class="gallery-caption">Hot coffee, ice on the side – your own iced latte.</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/cafe3.jpg"
+             alt="Coffee poured over a single ice cube in a glass">
+        <div class="gallery-caption">Stir, cool down and enjoy the view.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <h2>Visit us in El Sauzal</h2>
+    <p class="lead">
+      You’ll find us right on Avenida Inmaculada Concepción, a short walk
+      from viewpoints over the Atlantic and close to other local attractions
+      in El Sauzal.
+    </p>
+
+    <div class="visit-grid">
+      <div class="card">
+        <h3>Opening hours</h3>
+        <table class="hours-table" aria-label="Opening hours">
+          <tr><td>Monday</td><td>08:30 – 14:30</td></tr>
+          <tr><td>Tuesday</td><td>08:30 – 14:30</td></tr>
+          <tr><td>Wednesday</td><td>08:30 – 14:30</td></tr>
+          <tr><td>Thursday</td><td>08:30 – 14:30</td></tr>
+          <tr><td>Friday</td><td>08:30 – 13:00 &nbsp;·&nbsp; 17:00 – 23:00</td></tr>
+          <tr><td>Saturday</td><td>09:30 – 13:30 &nbsp;·&nbsp; 17:00 – 23:00</td></tr>
+          <tr><td>Sunday</td><td>Closed</td></tr>
+        </table>
+        <p style="font-size:0.78rem; margin-top:0.5rem; color:#777;">
+          (Hours may change on holidays – please call ahead to confirm.)
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>How to get here</h3>
+        <p>
+          We are located in the centre of El Sauzal on the north side
+          of Tenerife. There is street parking nearby and bus connections
+          from Santa Cruz, La Laguna and Puerto de la Cruz.
+        </p>
+        <p>
+          <a href="https://maps.google.com/?q=Cafeter%C3%ADa+Churrer%C3%ADa+San+Pedro+El+Sauzal"
+             target="_blank" rel="noopener">
+            Open in Google Maps →
+          </a>
+        </p>
+        <p style="margin-top:0.7rem; font-size:0.9rem;">
+          Have a question or want to check today’s specials?<br>
+          Call us on <a href="tel:+34922105000">+34 922 10 50 00</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © Cafetería Churrería San Pedro – El Sauzal, Tenerife · Since 1978
+</footer>
+
+</body>
+</html>
