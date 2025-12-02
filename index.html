@@ -5,7 +5,7 @@
   <title>Cafetería Churrería San Pedro – El Sauzal, Tenerife</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-        content="Cafetería Churrería San Pedro in El Sauzal, Tenerife – churros, great coffee and beautiful views.">
+        content="Cafetería Churrería San Pedro in El Sauzal, Tenerife – churros, great coffee, food and beautiful views.">
 
   <!-- Source - https://stackoverflow.com/a
        Posted by Sandy Al Akhras, modified by community. See post 'Timeline' for change history
@@ -337,6 +337,74 @@
       margin-top: 2rem;
     }
 
+    /* ---------- MENU SECTION ---------- */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
+      gap: 1.7rem;
+      margin-top: 1rem;
+      align-items: flex-start;
+    }
+
+    .menu-categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 1rem;
+    }
+
+    .menu-category {
+      background: var(--light);
+      border-radius: var(--radius);
+      padding: 1rem 1.1rem 1.1rem;
+      box-shadow: var(--shadow);
+      font-size: 0.9rem;
+    }
+
+    .menu-category h3 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .menu-category ul {
+      list-style: none;
+      margin-top: 0.3rem;
+    }
+
+    .menu-category li {
+      font-size: 0.85rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .menu-note {
+      font-size: 0.78rem;
+      color: #777;
+      margin-top: 0.5rem;
+    }
+
+    /* ---------- SOCIAL LINKS ---------- */
+    .social-links {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.7rem;
+    }
+
+    .social-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      font-size: 0.85rem;
+      box-shadow: var(--shadow);
+    }
+
+    .social-pill span.icon {
+      font-size: 1.1rem;
+    }
+
     /* ---------- LANGUAGE BLOCKS ---------- */
     .lang {
       display: none;
@@ -447,7 +515,7 @@
         width: 100%;
         justify-content: center;
       }
-      .hero, .two-col, .visit-grid {
+      .hero, .two-col, .visit-grid, .menu-grid {
         grid-template-columns: 1fr;
       }
       .hero {
@@ -501,6 +569,7 @@
     <div class="nav-center">
       <nav class="nav-links nav-en">
         <a href="#about-en">About</a>
+        <a href="#menu-en">Menu</a>
         <a href="#specialties-en">Specialties</a>
         <a href="#gallery-en">Gallery</a>
         <a href="#visit-en">Visit us</a>
@@ -509,6 +578,7 @@
       <!-- Spanish nav text -->
       <nav class="nav-links nav-es" style="display:none;">
         <a href="#about-es">Sobre nosotros</a>
+        <a href="#menu-es">Carta</a>
         <a href="#specialties-es">Especialidades</a>
         <a href="#gallery-es">Galería</a>
         <a href="#visit-es">Visítanos</a>
@@ -517,6 +587,7 @@
       <!-- German nav text -->
       <nav class="nav-links nav-de" style="display:none;">
         <a href="#about-de">Über uns</a>
+        <a href="#menu-de">Speisekarte</a>
         <a href="#specialties-de">Spezialitäten</a>
         <a href="#gallery-de">Galerie</a>
         <a href="#visit-de">Besuch</a>
@@ -542,10 +613,10 @@
       <h1>Fresh <span>churros</span>, ocean views &amp; café con leche</h1>
       <p>
         Cafetería Churrería San Pedro is a cosy, family-run spot in El Sauzal,
-        known for crispy churros, rich coffee and a relaxed local atmosphere.
+        known for crispy churros, rich coffee, generous food and a relaxed local atmosphere.
       </p>
       <div class="hero-actions">
-        <a href="#specialties-en" class="btn-primary">See our favourites ☕</a>
+        <a href="#menu-en" class="btn-primary">Browse the menu 🍽️</a>
         <a href="#visit-en" class="btn-ghost">Plan your visit →</a>
       </div>
     </div>
@@ -567,9 +638,9 @@
         <div>
           <h2>About San Pedro</h2>
           <p class="lead">
-            Since the late 1970s, San Pedro has been serving fresh churros and
-            classic Canarian coffee drinks to neighbours and visitors in
-            Avenida Inmaculada Concepción.
+            Since the late 1970s, San Pedro has been serving fresh churros,
+            classic Canarian coffee drinks and simple, tasty food to neighbours
+            and visitors in Avenida Inmaculada Concepción.
           </p>
           <p>
             Step inside for a warm, friendly atmosphere, or sit on the terrace
@@ -580,7 +651,7 @@
           <div class="chip-row">
             <span class="chip">Family-run</span>
             <span class="chip">Local favourite</span>
-            <span class="chip">Churros &amp; tapas</span>
+            <span class="chip">Churros &amp; snacks</span>
             <span class="chip">Great coffee</span>
           </div>
         </div>
@@ -593,6 +664,77 @@
           <p><strong>Phone:</strong> <a href="tel:+34922105000">+34 922 10 50 00</a></p>
           <p><strong>Price range:</strong> approx. €1 – €10 per person</p>
           <p><strong>Atmosphere:</strong> relaxed, friendly, popular with locals</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU EN -->
+    <section id="menu-en">
+      <h2>Menu</h2>
+      <p class="lead">
+        From arepas and sandwiches to crazy fries and half-meter sausages –
+        here’s a small overview of what we serve. Prices and availability can change.
+      </p>
+      <div class="menu-grid">
+        <div class="menu-categories">
+          <div class="menu-category">
+            <h3>Arepas</h3>
+            <ul>
+              <li>Mechada (shredded beef)</li>
+              <li>Pollo (chicken)</li>
+              <li>Pollo + aguacate</li>
+              <li>Queso</li>
+              <li>Papas asadas + queso</li>
+            </ul>
+          </div>
+          <div class="menu-category">
+            <h3>Bocadillos &amp; sandwiches</h3>
+            <ul>
+              <li>Lomo, pollo, mechada</li>
+              <li>American style sandwich</li>
+              <li>Queso blanco, jamón serrano</li>
+              <li>Pata asada, bacon, embutido</li>
+            </ul>
+          </div>
+          <div class="menu-category">
+            <h3>Croissants</h3>
+            <ul>
+              <li>Ham &amp; cheese croissant</li>
+              <li>Chicken croissant</li>
+              <li>Mechada croissant</li>
+              <li>Mixed croissant</li>
+            </ul>
+          </div>
+          <div class="menu-category">
+            <h3>Burgers &amp; hot dogs</h3>
+            <ul>
+              <li>Hamburguesa normal &amp; especial</li>
+              <li>Hamburguesa tropical</li>
+              <li>Perrito caliente (normal &amp; especial)</li>
+              <li>Polish sausage ½ meter with fries</li>
+            </ul>
+          </div>
+          <div class="menu-category">
+            <h3>Papas locas &amp; tablas</h3>
+            <ul>
+              <li>Papas locas – normal, especial, San Pedro</li>
+              <li>Cheese, serrano ham or pata asada boards</li>
+              <li>Mixed tabla with different meats &amp; cheese</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Original menu</h3>
+          <p style="font-size:0.9rem;">
+            You can always check the full menu and latest prices in the café.
+            We’ve also added the original printed menu here:
+          </p>
+          <!-- Use your menu photo here -->
+          <img src="menu.jpg" alt="Printed menu of Cafetería Churrería San Pedro">
+          <p class="menu-note">
+            Tip: add this file as <code>menu.jpg</code> to the same folder as this page.
+            If you update prices, just replace the image.
+          </p>
         </div>
       </div>
     </section>
@@ -627,529 +769,13 @@
           </p>
         </div>
         <div class="specialty">
-          <h3>Sandwiches &amp; snacks</h3>
+          <h3>Sandwiches, arepas &amp; burgers</h3>
           <p>
-            Generous sandwiches (including chicken), simple tapas and
-            small bites to share – ideal with a cold drink on the terrace.
+            Generous sandwiches (including chicken), Venezuelan-style arepas
+            and burgers – ideal with a cold drink on the terrace.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="gallery-en">
-      <h2>Coffee moments at San Pedro</h2>
-      <p class="lead">
-        A few snapshots of how we like our coffee: relaxed, sunny,
-        and sometimes in full 360°.
-      </p>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="cafe1.jpg"
-               alt="Coffee with a separate glass holding a large ice cube">
-          <div class="gallery-caption">Hot coffee with ice served on the side.</div>
-        </div>
-        <div class="gallery-item">
-          <img src="cafe2.jpg"
-               alt="Coffee with an ice cube inside the glass">
-          <div class="gallery-caption">Your iced café con leche ready to enjoy.</div>
-        </div>
-        <div class="gallery-item">
-          <!-- 360° viewer -->
-          <a-scene embedded class="vr-frame">
-            <a-sky src="cafe3.jpg" rotation="0 -90 0"></a-sky>
-          </a-scene>
-          <div class="gallery-caption">
-            360° view captured at Cafetería Churrería San Pedro.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="visit-en">
-      <h2>Visit us in El Sauzal</h2>
-      <p class="lead">
-        You’ll find us right on Avenida Inmaculada Concepción, a short walk
-        from viewpoints over the Atlantic and close to other local attractions
-        in El Sauzal.
-      </p>
-
-      <div class="visit-grid">
-        <div class="card">
-          <h3>Opening hours</h3>
-          <table class="hours-table" aria-label="Opening hours">
-            <tr><td>Monday</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Tuesday</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Wednesday</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Thursday</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Friday</td><td>08:30 – 13:00 · 17:00 – 23:00</td></tr>
-            <tr><td>Saturday</td><td>09:30 – 13:30 · 17:00 – 23:00</td></tr>
-            <tr><td>Sunday</td><td>Closed</td></tr>
-          </table>
-          <p style="font-size:0.78rem; margin-top:0.5rem; color:#777;">
-            (Hours may change on holidays – please call ahead to confirm.)
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>How to get here</h3>
-          <p>
-            We are located in the centre of El Sauzal on the north side
-            of Tenerife. There is street parking nearby and bus connections
-            from Santa Cruz, La Laguna and Puerto de la Cruz.
-          </p>
-          <p>
-            <a href="https://maps.google.com/?q=Cafeter%C3%ADa+Churrer%C3%ADa+San+Pedro+El+Sauzal"
-               target="_blank" rel="noopener">
-              Open in Google Maps →
-            </a>
-          </p>
-          <p style="margin-top:0.7rem; font-size:0.9rem;">
-            Have a question or want to check today’s specials?<br>
-            Call us on <a href="tel:+34922105000">+34 922 10 50 00</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © Cafetería Churrería San Pedro – El Sauzal, Tenerife · Since 1978
-  </footer>
-</div>
-
-<!-- ESPAÑOL -->
-<div class="lang" data-lang="es">
-  <section class="hero">
-    <div class="hero-text">
-      <div class="hero-badge">Desde 1978 · El Sauzal, Tenerife</div>
-      <h1>Churros <span>recién hechos</span>, vistas al mar y café con leche</h1>
-      <p>
-        Cafetería Churrería San Pedro es un local familiar en El Sauzal,
-        conocido por sus churros crujientes, buen café y ambiente tranquilo.
-      </p>
-      <div class="hero-actions">
-        <a href="#specialties-es" class="btn-primary">Ver nuestras especialidades ☕</a>
-        <a href="#visit-es" class="btn-ghost">Planear tu visita →</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <div class="hero-card">
-        <img src="cafe2.jpg"
-             alt="Café con leche con un cubito de hielo dentro del vaso">
-      </div>
-      <div class="hero-note">
-        Tu café con leche frío, listo para disfrutar
-      </div>
-    </div>
-  </section>
-
-  <main>
-    <section id="about-es">
-      <div class="two-col">
-        <div>
-          <h2>Sobre San Pedro</h2>
-          <p class="lead">
-            Desde finales de los años 70, San Pedro sirve churros recién hechos
-            y cafés clásicos canarios a vecinos y visitantes en la
-            Avenida Inmaculada Concepción.
-          </p>
-          <p>
-            Pasa al interior para un ambiente cercano, o siéntate en la terraza
-            y disfruta de las vistas sobre El Sauzal y la costa norte de Tenerife.
-            Es un sitio perfecto para desayunar, tomar un café a media mañana
-            o picar algo por la tarde-noche.
-          </p>
-          <div class="chip-row">
-            <span class="chip">Negocio familiar</span>
-            <span class="chip">Favorito local</span>
-            <span class="chip">Churros &amp; tapas</span>
-            <span class="chip">Buen café</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Información útil</h3>
-          <p><strong>Dirección:</strong><br>
-            Av. Inmaculada Concepción 4,<br>
-            38360 El Sauzal, Santa Cruz de Tenerife, España
-          </p>
-          <p><strong>Teléfono:</strong> <a href="tel:+34922105000">+34 922 10 50 00</a></p>
-          <p><strong>Precio medio:</strong> aprox. 1 € – 10 € por persona</p>
-          <p><strong>Ambiente:</strong> tranquilo, familiar, muy local</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="specialties-es">
-      <h2>Nuestras especialidades</h2>
-      <p class="lead">
-        Ya sea para desayunar, tomar un café rápido o picar algo,
-        estos clásicos no te los puedes perder.
-      </p>
-      <div class="specialties-grid">
-        <div class="specialty">
-          <h3>Churros recién hechos</h3>
-          <p>
-            Churros ligeros y crujientes, fritos al momento y servidos muy calientes –
-            perfectos con café, chocolate o simplemente con azúcar.
-          </p>
-        </div>
-        <div class="specialty">
-          <h3>Café con leche</h3>
-          <p>
-            Café suave con leche, servido en vaso: caliente o al estilo “San Pedro”,
-            con un vaso aparte lleno de hielo.
-          </p>
-        </div>
-        <div class="specialty">
-          <h3>Barraquito</h3>
-          <p>
-            Café canario por capas con leche condensada, Licor 43 y un toque
-            de canela y limón. Dulce, cremoso y muy de Tenerife.
-          </p>
-        </div>
-        <div class="specialty">
-          <h3>Bocadillos y tapas</h3>
-          <p>
-            Bocadillos generosos (también de pollo), tapas sencillas y
-            pequeños platos para compartir – ideales con una cerveza fría
-            en la terraza.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery-es">
-      <h2>Momentos de café en San Pedro</h2>
-      <p class="lead">
-        Algunas instantáneas de cómo nos gusta el café: relajado, al sol
-        y a veces en 360°.
-      </p>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="cafe1.jpg"
-               alt="Café y vaso aparte con un cubito de hielo grande">
-          <div class="gallery-caption">Café caliente, hielo aparte – tu propio café con hielo.</div>
-        </div>
-        <div class="gallery-item">
-          <img src="cafe2.jpg"
-               alt="Café con leche con un cubito de hielo dentro del vaso">
-          <div class="gallery-caption">Café con leche frío listo para tomar.</div>
-        </div>
-        <div class="gallery-item">
-          <a-scene embedded class="vr-frame">
-            <a-sky src="cafe3.jpg" rotation="0 -90 0"></a-sky>
-          </a-scene>
-          <div class="gallery-caption">
-            Vista 360° capturada en Cafetería Churrería San Pedro.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="visit-es">
-      <h2>Ven a vernos a El Sauzal</h2>
-      <p class="lead">
-        Nos encontrarás en plena Avenida Inmaculada Concepción, a pocos minutos
-        de los miradores hacia el Atlántico y de otros rincones de El Sauzal.
-      </p>
-
-      <div class="visit-grid">
-        <div class="card">
-          <h3>Horario</h3>
-          <table class="hours-table" aria-label="Horario">
-            <tr><td>Lunes</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Martes</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Miércoles</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Jueves</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Viernes</td><td>08:30 – 13:00 · 17:00 – 23:00</td></tr>
-            <tr><td>Sábado</td><td>09:30 – 13:30 · 17:00 – 23:00</td></tr>
-            <tr><td>Domingo</td><td>Cerrado</td></tr>
-          </table>
-          <p style="font-size:0.78rem; margin-top:0.5rem; color:#777;">
-            (El horario puede variar en festivos – mejor llamar para confirmar.)
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Cómo llegar</h3>
-          <p>
-            Estamos en el centro de El Sauzal, en el norte de Tenerife.
-            Hay aparcamiento en la calle y conexiones de guagua
-            desde Santa Cruz, La Laguna y Puerto de la Cruz.
-          </p>
-          <p>
-            <a href="https://maps.google.com/?q=Cafeter%C3%ADa+Churrer%C3%ADa+Churrer%C3%ADa+San+Pedro+El+Sauzal"
-               target="_blank" rel="noopener">
-              Abrir en Google Maps →
-            </a>
-          </p>
-          <p style="margin-top:0.7rem; font-size:0.9rem;">
-            ¿Tienes alguna duda o quieres saber las sugerencias del día?<br>
-            Llámanos al <a href="tel:+34922105000">+34 922 10 50 00</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © Cafetería Churrería San Pedro – El Sauzal, Tenerife · Desde 1978
-  </footer>
-</div>
-
-<!-- DEUTSCH -->
-<div class="lang" data-lang="de">
-  <section class="hero">
-    <div class="hero-text">
-      <div class="hero-badge">Seit 1978 · El Sauzal, Teneriffa</div>
-      <h1>Frische <span>Churros</span>, Meerblick &amp; Café con leche</h1>
-      <p>
-        Die Cafetería Churrería San Pedro ist ein gemütliches Familiencafé in
-        El Sauzal – bekannt für knusprige Churros, kräftigen Kaffee und eine
-        entspannte, lokale Atmosphäre.
-      </p>
-      <div class="hero-actions">
-        <a href="#specialties-de" class="btn-primary">Unsere Favoriten ansehen ☕</a>
-        <a href="#visit-de" class="btn-ghost">Besuch planen →</a>
-      </div>
-    </div>
-    <div class="hero-image">
-      <div class="hero-card">
-        <img src="cafe2.jpg"
-             alt="Glas mit Café con leche und Eiswürfel im Glas">
-      </div>
-      <div class="hero-note">
-        Dein perfekt gekühlter Café con leche
-      </div>
-    </div>
-  </section>
-
-  <main>
-    <section id="about-de">
-      <div class="two-col">
-        <div>
-          <h2>Über San Pedro</h2>
-          <p class="lead">
-            Seit Ende der 1970er Jahre serviert San Pedro frische Churros
-            und klassische kanarische Kaffeespezialitäten an Nachbarn und
-            Besucher in der Avenida Inmaculada Concepción.
-          </p>
-          <p>
-            Drinnen erwartet dich eine warme, freundliche Atmosphäre;
-            auf der Terrasse kannst du den Blick über El Sauzal und die
-            Nordküste Teneriffas genießen. Ideal für Frühstück,
-            einen Kaffee zwischendurch oder einen entspannten Abenddrink
-            mit kleinen Snacks.
-          </p>
-          <div class="chip-row">
-            <span class="chip">Familienbetrieb</span>
-            <span class="chip">Beliebt bei Einheimischen</span>
-            <span class="chip">Churros &amp; Tapas</span>
-            <span class="chip">Guter Kaffee</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Gut zu wissen</h3>
-          <p><strong>Adresse:</strong><br>
-            Av. Inmaculada Concepción 4,<br>
-            38360 El Sauzal, Santa Cruz de Tenerife, Spanien
-          </p>
-          <p><strong>Telefon:</strong> <a href="tel:+34922105000">+34 922 10 50 00</a></p>
-          <p><strong>Preisspanne:</strong> ca. 1 € – 10 € pro Person</p>
-          <p><strong>Atmosphäre:</strong> entspannt, freundlich, sehr lokal</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="specialties-de">
-      <h2>Unsere Spezialitäten</h2>
-      <p class="lead">
-        Egal ob zum Frühstück, für einen schnellen Kaffee oder einen Snack
-        am Abend – diese Klassiker solltest du probieren.
-      </p>
-      <div class="specialties-grid">
-        <div class="specialty">
-          <h3>Frische Churros</h3>
-          <p>
-            Leichte, knusprige Churros, frisch frittiert und heiß serviert –
-            perfekt zu Kaffee, heißer Schokolade oder einfach mit Zucker.
-          </p>
-        </div>
-        <div class="specialty">
-          <h3>Café con leche</h3>
-          <p>
-            Sanfter Kaffee mit Milch, im Glas serviert – heiß oder auf
-            „San-Pedro-Art“ mit einem Glas voller Eiswürfel separat.
-          </p>
-        </div>
-        <div class="specialty">
-          <h3>Barraquito</h3>
-          <p>
-            Traditioneller kanarischer Schichtkaffee mit Kondensmilch,
-            Licor 43 sowie Zimt und Zitrone – süß, cremig und typisch
-            Teneriffa.
-          </p>
-        </div>
-        <div class="specialty">
-          <h3>Sandwiches &amp; Snacks</h3>
-          <p>
-            Große Sandwiches (auch mit Hähnchen), kleine Tapas und
-            Snacks zum Teilen – perfekt zu einem kühlen Getränk
-            auf der Terrasse.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="gallery-de">
-      <h2>Kaffeemomente im San Pedro</h2>
-      <p class="lead">
-        Ein paar Eindrücke, wie wir unseren Kaffee am liebsten genießen:
-        entspannt, sonnig – und manchmal in 360°.
-      </p>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="cafe1.jpg"
-               alt="Kaffee und separates Glas mit großem Eiswürfel">
-          <div class="gallery-caption">
-            Heißer Kaffee, Eiswürfel im Extra-Glas – ganz nach deinem Geschmack.
-          </div>
-        </div>
-        <div class="gallery-item">
-          <img src="cafe2.jpg"
-               alt="Café con leche mit Eiswürfel im Glas">
-          <div class="gallery-caption">
-            Gekühlter Café con leche, bereit zum Genießen.
-          </div>
-        </div>
-        <div class="gallery-item">
-          <a-scene embedded class="vr-frame">
-            <a-sky src="cafe3.jpg" rotation="0 -90 0"></a-sky>
-          </a-scene>
-          <div class="gallery-caption">
-            360°-Panoramablick in der Cafetería Churrería San Pedro.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="visit-de">
-      <h2>Besuch in El Sauzal</h2>
-      <p class="lead">
-        Du findest uns direkt an der Avenida Inmaculada Concepción, nur wenige
-        Minuten von Aussichtspunkten über den Atlantik und anderen Highlights
-        in El Sauzal entfernt.
-      </p>
-
-      <div class="visit-grid">
-        <div class="card">
-          <h3>Öffnungszeiten</h3>
-          <table class="hours-table" aria-label="Öffnungszeiten">
-            <tr><td>Montag</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Dienstag</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Mittwoch</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Donnerstag</td><td>08:30 – 14:30</td></tr>
-            <tr><td>Freitag</td><td>08:30 – 13:00 · 17:00 – 23:00</td></tr>
-            <tr><td>Samstag</td><td>09:30 – 13:30 · 17:00 – 23:00</td></tr>
-            <tr><td>Sonntag</td><td>Geschlossen</td></tr>
-          </table>
-          <p style="font-size:0.78rem; margin-top:0.5rem; color:#777;">
-            (An Feiertagen können die Zeiten abweichen – am besten kurz anrufen.)
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>So findest du uns</h3>
-          <p>
-            Wir liegen im Zentrum von El Sauzal im Norden Teneriffas.
-            In der Nähe gibt es Parkmöglichkeiten auf der Straße und
-            Busverbindungen aus Santa Cruz, La Laguna und Puerto de la Cruz.
-          </p>
-          <p>
-            <a href="https://maps.google.com/?q=Cafeter%C3%ADa+Churrer%C3%ADa+San+Pedro+El+Sauzal"
-               target="_blank" rel="noopener">
-              In Google Maps öffnen →
-            </a>
-          </p>
-          <p style="margin-top:0.7rem; font-size:0.9rem;">
-            Fragen oder Lust auf das Tagesangebot?<br>
-            Ruf uns an unter <a href="tel:+34922105000">+34 922 10 50 00</a>.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © Cafetería Churrería San Pedro – El Sauzal, Teneriffa · Seit 1978
-  </footer>
-</div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const select = document.getElementById('languageSelect');
-    const langBlocks = document.querySelectorAll('.lang');
-    const navEn = document.querySelector('.nav-en');
-    const navEs = document.querySelector('.nav-es');
-    const navDe = document.querySelector('.nav-de');
-    const gate = document.getElementById('langGate');
-    const gateButtons = document.querySelectorAll('.btn-lang');
-
-    function updateLanguage(lang) {
-      // Show correct content block
-      langBlocks.forEach(block => {
-        block.classList.toggle('lang--active', block.dataset.lang === lang);
-      });
-
-      // Switch nav text
-      navEn.style.display = (lang === 'en') ? 'flex' : 'none';
-      navEs.style.display = (lang === 'es') ? 'flex' : 'none';
-      navDe.style.display = (lang === 'de') ? 'flex' : 'none';
-
-      // Update select dropdown
-      select.value = lang;
-
-      // Remember choice
-      try {
-        localStorage.setItem('sanpedro_lang', lang);
-      } catch (e) {}
-    }
-
-    // Dropdown handler (top-right)
-    select.addEventListener('change', function (e) {
-      updateLanguage(e.target.value);
-    });
-
-    // Popup buttons
-    gateButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const lang = btn.getAttribute('data-lang');
-        updateLanguage(lang);
-        gate.classList.add('lang-gate-hidden');
-      });
-    });
-
-    // ESC closes popup with default English
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && !gate.classList.contains('lang-gate-hidden')) {
-        gate.classList.add('lang-gate-hidden');
-        updateLanguage('en');
-      }
-    });
-
-    // If user has visited before, skip popup and use saved language
-    let initialLang = 'en';
-    try {
-      const stored = localStorage.getItem('sanpedro_lang');
-      if (stored === 'en' || stored === 'es' || stored === 'de') {
-        initialLang = stored;
-        gate.classList.add('lang-gate-hidden');
-      }
-    } catch (e) {}
-
-    updateLanguage(initialLang);
-  });
-</script>
-
-</body>
-</html>
+    <sec
