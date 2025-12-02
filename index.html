@@ -10,9 +10,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
-  <!-- Source - https://stackoverflow.com/a
-       Posted by Sandy Al Akhras, modified by community. See post 'Timeline' for change history
-       Retrieved 2025-12-01, License - CC BY-SA 4.0 -->
   <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
 
   <style>
@@ -51,7 +48,6 @@
       display: block;
     }
 
-    /* ---------- HEADER ---------- */
     header {
       position: sticky;
       top: 0;
@@ -109,7 +105,6 @@
       font-size: 0.85rem;
     }
 
-    /* ---------- HERO & MAIN LAYOUT ---------- */
     .hero {
       max-width: 1100px;
       margin: 1.5rem auto 2.5rem;
@@ -340,7 +335,6 @@
       margin-top: 2rem;
     }
 
-    /* ---------- MENU SECTION ---------- */
     .menu-grid {
       display: grid;
       grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
@@ -384,7 +378,6 @@
       margin-top: 0.5rem;
     }
 
-    /* ---------- SOCIAL LINKS ---------- */
     .social-links {
       display: flex;
       gap: 0.5rem;
@@ -408,7 +401,6 @@
       font-size: 1.1rem;
     }
 
-    /* ---------- LANGUAGE BLOCKS ---------- */
     .lang {
       display: none;
     }
@@ -416,7 +408,6 @@
       display: block;
     }
 
-    /* ---------- FULLSCREEN LANGUAGE GATE ---------- */
     .lang-gate-backdrop {
       position: fixed;
       inset: 0;
@@ -532,7 +523,6 @@
 </head>
 <body>
 
-<!-- FULLSCREEN LANGUAGE POPUP -->
 <div class="lang-gate-backdrop" id="langGate">
   <div class="lang-gate-card">
     <div class="lang-gate-logo">Cafetería Churrería San Pedro</div>
@@ -568,7 +558,6 @@
   <div class="nav">
     <div class="logo">Cafetería Churrería San Pedro</div>
 
-    <!-- English nav text -->
     <div class="nav-center">
       <nav class="nav-links nav-en">
         <a href="#about-en">About</a>
@@ -578,7 +567,6 @@
         <a href="#visit-en">Visit us</a>
       </nav>
 
-      <!-- Spanish nav text -->
       <nav class="nav-links nav-es" style="display:none;">
         <a href="#about-es">Sobre nosotros</a>
         <a href="#menu-es">Carta</a>
@@ -587,7 +575,6 @@
         <a href="#visit-es">Visítanos</a>
       </nav>
 
-      <!-- German nav text -->
       <nav class="nav-links nav-de" style="display:none;">
         <a href="#about-de">Über uns</a>
         <a href="#menu-de">Speisekarte</a>
@@ -608,7 +595,6 @@
   </div>
 </header>
 
-<!-- ENGLISH CONTENT -->
 <div class="lang lang--active" data-lang="en">
   <section class="hero">
     <div class="hero-text">
@@ -625,12 +611,11 @@
     </div>
     <div class="hero-image">
       <div class="hero-card">
-        <!-- Hero uses the finished iced coffee (cafe2.jpg) -->
-        <img src="cafe2.jpg"
-             alt="Coffee with ice cube inside the glass on a white table">
+        <img src="store.jpg"
+             alt="Exterior of Cafetería Churrería San Pedro in El Sauzal">
       </div>
       <div class="hero-note">
-        Your perfect iced café con leche
+        Your neighbourhood café in El Sauzal
       </div>
     </div>
   </section>
@@ -654,7 +639,7 @@
           <div class="chip-row">
             <span class="chip">Family-run</span>
             <span class="chip">Local favourite</span>
-            <span class="chip">Churros &amp; snacks</span>
+            <span class="chip">Churros only Fri &amp; Sat</span>
             <span class="chip">Great coffee</span>
           </div>
         </div>
@@ -671,7 +656,6 @@
       </div>
     </section>
 
-    <!-- MENU EN -->
     <section id="menu-en">
       <h2>Menu</h2>
       <p class="lead">
@@ -728,16 +712,7 @@
         </div>
         <div class="card">
           <h3>Original menu</h3>
-          <p style="font-size:0.9rem;">
-            You can always check the full menu and latest prices in the café.
-            We’ve also added the original printed menu here:
-          </p>
-          <!-- Use your menu photo here -->
           <img src="menu.jpg" alt="Printed menu of Cafetería Churrería San Pedro">
-          <p class="menu-note">
-            Tip: add this file as <code>menu.jpg</code> to the same folder as this page.
-            If you update prices, just replace the image.
-          </p>
         </div>
       </div>
     </section>
@@ -753,7 +728,7 @@
           <h3>Churros recién hechos</h3>
           <p>
             Light and crispy churros, fried to order and served hot –
-            perfect with coffee, hot chocolate or on their own with sugar.
+            available only on Fridays and Saturdays.
           </p>
         </div>
         <div class="specialty">
@@ -792,7 +767,7 @@
           <img src="food-churros.jpg"
                alt="Plate of freshly fried churros with sugar">
           <div class="gallery-caption">
-            Fresh churros, just out of the fryer.
+            Fresh churros, just out of the fryer (Fridays &amp; Saturdays only).
           </div>
         </div>
         <div class="gallery-item">
@@ -820,7 +795,6 @@
           <div class="gallery-caption">Your iced café con leche ready to enjoy.</div>
         </div>
         <div class="gallery-item">
-          <!-- 360° viewer (may require HTTPS/WebGL to work properly) -->
           <a-scene embedded class="vr-frame">
             <a-sky src="cafe3.jpg" rotation="0 -90 0"></a-sky>
           </a-scene>
@@ -829,11 +803,6 @@
           </div>
         </div>
       </div>
-      <p class="menu-note" style="margin-top:0.8rem;">
-        To use photos from Google reviews, download your favourite food pictures
-        and save them as <code>food-churros.jpg</code>, <code>food-papas-locas.jpg</code>
-        and <code>food-bocadillo.jpg</code> in the same folder as this page.
-      </p>
     </section>
 
     <section id="visit-en">
@@ -856,8 +825,8 @@
             <tr><td>Saturday</td><td>09:30 – 13:30 · 17:00 – 23:00</td></tr>
             <tr><td>Sunday</td><td>Closed</td></tr>
           </table>
-          <p style="font-size:0.78rem; margin-top:0.5rem; color:#777;">
-            (Hours may change on holidays – please call ahead to confirm.)
+          <p class="menu-note">
+            Hours may change on holidays – please call ahead to confirm.
           </p>
         </div>
 
@@ -895,7 +864,6 @@
   </footer>
 </div>
 
-<!-- ESPAÑOL -->
 <div class="lang" data-lang="es">
   <section class="hero">
     <div class="hero-text">
@@ -913,11 +881,11 @@
     </div>
     <div class="hero-image">
       <div class="hero-card">
-        <img src="cafe2.jpg"
-             alt="Café con leche con un cubito de hielo dentro del vaso">
+        <img src="store.jpg"
+             alt="Exterior de la Cafetería Churrería San Pedro en El Sauzal">
       </div>
       <div class="hero-note">
-        Tu café con leche frío, listo para disfrutar
+        Tu cafetería de barrio en El Sauzal
       </div>
     </div>
   </section>
@@ -941,7 +909,7 @@
           <div class="chip-row">
             <span class="chip">Negocio familiar</span>
             <span class="chip">Favorito local</span>
-            <span class="chip">Churros &amp; bocadillos</span>
+            <span class="chip">Churros solo vie &amp; sáb</span>
             <span class="chip">Buen café</span>
           </div>
         </div>
@@ -958,7 +926,6 @@
       </div>
     </section>
 
-    <!-- MENU ES -->
     <section id="menu-es">
       <h2>Carta</h2>
       <p class="lead">
@@ -1015,15 +982,7 @@
         </div>
         <div class="card">
           <h3>Carta original</h3>
-          <p style="font-size:0.9rem;">
-            En el local siempre encontrarás la carta completa y los precios
-            actualizados. También añadimos aquí la foto de la carta:
-          </p>
           <img src="menu.jpg" alt="Carta impresa de Cafetería Churrería San Pedro">
-          <p class="menu-note">
-            Guarda la foto de la carta como <code>menu.jpg</code> en la misma carpeta.
-            Para actualizar precios, solo tienes que cambiar la imagen.
-          </p>
         </div>
       </div>
     </section>
@@ -1039,7 +998,7 @@
           <h3>Churros recién hechos</h3>
           <p>
             Churros ligeros y crujientes, fritos al momento y servidos muy calientes –
-            perfectos con café, chocolate o simplemente con azúcar.
+            disponibles solo los viernes y sábados.
           </p>
         </div>
         <div class="specialty">
@@ -1077,7 +1036,8 @@
           <img src="food-churros.jpg"
                alt="Plato de churros recién fritos con azúcar">
           <div class="gallery-caption">
-            Churros recién hechos para mojar en café o chocolate.
+            Churros recién hechos para mojar en café o chocolate
+            (solo viernes y sábados).
           </div>
         </div>
         <div class="gallery-item">
@@ -1113,11 +1073,6 @@
           </div>
         </div>
       </div>
-      <p class="menu-note" style="margin-top:0.8rem;">
-        Para usar fotos de Google, descárgalas y guárdalas como
-        <code>food-churros.jpg</code>, <code>food-papas-locas.jpg</code> y
-        <code>food-bocadillo.jpg</code> en la misma carpeta.
-      </p>
     </section>
 
     <section id="visit-es">
@@ -1139,8 +1094,8 @@
             <tr><td>Sábado</td><td>09:30 – 13:30 · 17:00 – 23:00</td></tr>
             <tr><td>Domingo</td><td>Cerrado</td></tr>
           </table>
-          <p style="font-size:0.78rem; margin-top:0.5rem; color:#777;">
-            (El horario puede variar en festivos – mejor llamar para confirmar.)
+          <p class="menu-note">
+            El horario puede variar en festivos – mejor llamar para confirmar.
           </p>
         </div>
 
@@ -1178,7 +1133,6 @@
   </footer>
 </div>
 
-<!-- DEUTSCH -->
 <div class="lang" data-lang="de">
   <section class="hero">
     <div class="hero-text">
@@ -1196,11 +1150,11 @@
     </div>
     <div class="hero-image">
       <div class="hero-card">
-        <img src="cafe2.jpg"
-             alt="Glas mit Café con leche und Eiswürfel im Glas">
+        <img src="store.jpg"
+             alt="Außenansicht der Cafetería Churrería San Pedro in El Sauzal">
       </div>
       <div class="hero-note">
-        Dein perfekt gekühlter Café con leche
+        Dein Café im Herzen von El Sauzal
       </div>
     </div>
   </section>
@@ -1225,7 +1179,7 @@
           <div class="chip-row">
             <span class="chip">Familienbetrieb</span>
             <span class="chip">Beliebt bei Einheimischen</span>
-            <span class="chip">Churros &amp; Snacks</span>
+            <span class="chip">Churros nur Fr &amp; Sa</span>
             <span class="chip">Guter Kaffee</span>
           </div>
         </div>
@@ -1242,7 +1196,6 @@
       </div>
     </section>
 
-    <!-- MENU DE -->
     <section id="menu-de">
       <h2>Speisekarte</h2>
       <p class="lead">
@@ -1299,15 +1252,7 @@
         </div>
         <div class="card">
           <h3>Originale Speisekarte</h3>
-          <p style="font-size:0.9rem;">
-            Die vollständige Speisekarte mit aktuellen Preisen findest du im Café.
-            Zusätzlich zeigen wir hier ein Foto der Karte:
-          </p>
           <img src="menu.jpg" alt="Gedruckte Speisekarte der Cafetería Churrería San Pedro">
-          <p class="menu-note">
-            Lege das Bild als <code>menu.jpg</code> in denselben Ordner.
-            Wenn sich Preise ändern, einfach die Datei austauschen.
-          </p>
         </div>
       </div>
     </section>
@@ -1323,7 +1268,7 @@
           <h3>Frische Churros</h3>
           <p>
             Leichte, knusprige Churros, frisch frittiert und heiß serviert –
-            perfekt zu Kaffee, heißer Schokolade oder einfach mit Zucker.
+            nur freitags und samstags erhältlich.
           </p>
         </div>
         <div class="specialty">
@@ -1362,7 +1307,7 @@
           <img src="food-churros.jpg"
                alt="Teller mit frisch frittierten Churros und Zucker">
           <div class="gallery-caption">
-            Frische Churros direkt aus der Fritteuse.
+            Frische Churros direkt aus der Fritteuse (nur freitags und samstags).
           </div>
         </div>
         <div class="gallery-item">
@@ -1402,11 +1347,6 @@
           </div>
         </div>
       </div>
-      <p class="menu-note" style="margin-top:0.8rem;">
-        Lade Fotos aus den Google-Bewertungen herunter und speichere sie als
-        <code>food-churros.jpg</code>, <code>food-papas-locas.jpg</code> und
-        <code>food-bocadillo.jpg</code> im selben Ordner.
-      </p>
     </section>
 
     <section id="visit-de">
@@ -1429,8 +1369,8 @@
             <tr><td>Samstag</td><td>09:30 – 13:30 · 17:00 – 23:00</td></tr>
             <tr><td>Sonntag</td><td>Geschlossen</td></tr>
           </table>
-          <p style="font-size:0.78rem; margin-top:0.5rem; color:#777;">
-            (An Feiertagen können die Zeiten abweichen – am besten kurz anrufen.)
+          <p class="menu-note">
+            An Feiertagen können die Zeiten abweichen – am besten kurz anrufen.
           </p>
         </div>
 
@@ -1479,31 +1419,25 @@
     const gateButtons = document.querySelectorAll('.btn-lang');
 
     function updateLanguage(lang) {
-      // Show correct content block
       langBlocks.forEach(block => {
         block.classList.toggle('lang--active', block.dataset.lang === lang);
       });
 
-      // Switch nav text
       navEn.style.display = (lang === 'en') ? 'flex' : 'none';
       navEs.style.display = (lang === 'es') ? 'flex' : 'none';
       navDe.style.display = (lang === 'de') ? 'flex' : 'none';
 
-      // Update select dropdown
       select.value = lang;
 
-      // Remember choice
       try {
         localStorage.setItem('sanpedro_lang', lang);
       } catch (e) {}
     }
 
-    // Dropdown handler (top-right)
     select.addEventListener('change', function (e) {
       updateLanguage(e.target.value);
     });
 
-    // Popup buttons
     gateButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         const lang = btn.getAttribute('data-lang');
@@ -1512,7 +1446,6 @@
       });
     });
 
-    // ESC closes popup with default English
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && !gate.classList.contains('lang-gate-hidden')) {
         gate.classList.add('lang-gate-hidden');
@@ -1520,7 +1453,6 @@
       }
     });
 
-    // If user has visited before, skip popup and use saved language
     let initialLang = 'en';
     try {
       const stored = localStorage.getItem('sanpedro_lang');
