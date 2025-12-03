@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   const select = document.getElementById('languageSelect');
   const langBlocks = document.querySelectorAll('.lang');
   const navEn = document.querySelector('.nav-en');
@@ -24,15 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     try {
       localStorage.setItem('sanpedro_lang', lang);
-    } catch (e) {}
+    } catch (e) {
+      // ignore
+    }
   }
 
+  // Top-right selector
   if (select) {
-    select.addEventListener('change', function (e) {
+    select.addEventListener('change', e => {
       updateLanguage(e.target.value);
     });
   }
 
+  // Language gate buttons
   gateButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const lang = btn.getAttribute('data-lang') || 'en';
@@ -67,24 +71,21 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    // Click background to close (not the image itself)
-   // Click background OR image to close
-imageModal.addEventListener('click', (e) => {
-  if (e.target === imageModal || e.target === imageModalImg) {
-    closeImageModal();
-  }
-});
-
+    // Click background OR image to close
+    imageModal.addEventListener('click', e => {
+      if (e.target === imageModal || e.target === imageModalImg) {
+        closeImageModal();
+      }
+    });
   }
 
+  // ESC key: close modal, then language gate (fallback to English)
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
-      // Close image modal first if open
       if (imageModal && imageModal.classList.contains('image-modal--active')) {
         closeImageModal();
         return;
       }
-      // Then close language gate if still visible
       if (gate && !gate.classList.contains('lang-gate-hidden')) {
         gate.classList.add('lang-gate-hidden');
         updateLanguage('en');
@@ -92,6 +93,7 @@ imageModal.addEventListener('click', (e) => {
     }
   });
 
+  // Initial language from localStorage or default to EN
   let initialLang = 'en';
   try {
     const stored = localStorage.getItem('sanpedro_lang');
@@ -101,7 +103,9 @@ imageModal.addEventListener('click', (e) => {
         gate.classList.add('lang-gate-hidden');
       }
     }
-  } catch (e) {}
+  } catch (e) {
+    // ignore
+  }
 
   updateLanguage(initialLang);
 });
