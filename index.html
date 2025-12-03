@@ -228,7 +228,12 @@
         </div>
         <div class="card">
           <h3>Printed menu</h3>
-          <img src="menu.jpg" alt="Printed menu of Cafetería Churrería San Pedro">
+          <img src="menu.jpg"
+               alt="Printed menu of Cafetería Churrería San Pedro"
+               class="menu-image">
+          <p class="menu-note">
+            Click/tap to open the menu full-screen and zoom in.
+          </p>
         </div>
       </div>
     </section>
@@ -505,7 +510,12 @@
         </div>
         <div class="card">
           <h3>Carta original</h3>
-          <img src="menu.jpg" alt="Carta impresa de Cafetería Churrería San Pedro">
+          <img src="menu.jpg"
+               alt="Carta impresa de Cafetería Churrería San Pedro"
+               class="menu-image">
+          <p class="menu-note">
+            Pulsa para ver la carta en pantalla completa y hacer zoom.
+          </p>
         </div>
       </div>
     </section>
@@ -804,7 +814,12 @@
         </div>
         <div class="card">
           <h3>Gedruckte Speisekarte</h3>
-          <img src="menu.jpg" alt="Gedruckte Speisekarte der Cafetería Churrería San Pedro">
+          <img src="menu.jpg"
+               alt="Gedruckte Speisekarte der Cafetería Churrería San Pedro"
+               class="menu-image">
+          <p class="menu-note">
+            Zum Öffnen der Speisekarte im Vollbild anklicken und hineinzoomen.
+          </p>
         </div>
       </div>
     </section>
@@ -962,6 +977,11 @@
   <footer>
     © Cafetería Churrería San Pedro – El Sauzal, Teneriffa · Seit 1978
   </footer>
+</div>
+
+<!-- Fullscreen image modal for menu -->
+<div class="image-modal" id="imageModal" aria-hidden="true">
+  <img id="imageModalImg" src="" alt="">
 </div>
 
 <script src="./script.js"></script>
