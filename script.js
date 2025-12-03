@@ -68,11 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Click background to close (not the image itself)
-    imageModal.addEventListener('click', (e) => {
-      if (e.target === imageModal) {
-        closeImageModal();
-      }
-    });
+   // Click background OR image to close
+imageModal.addEventListener('click', (e) => {
+  if (e.target === imageModal || e.target === imageModalImg) {
+    closeImageModal();
+  }
+});
+
   }
 
   document.addEventListener('keydown', e => {
