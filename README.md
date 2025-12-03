@@ -1,4 +1,4 @@
-[![Cafeteria Churrería San Pedro – Click to visit](./favicon.ico "Cafeteria Churrería San Pedro Logo")](https://ferrannl.github.io/Cafeteria-Churreria-San-Pedro/index.html)
+[![Cafeteria Churrería San Pedro – Click to visit](./store.jpg "Cafeteria Churrería San Pedro Logo")](https://ferrannl.github.io/Cafeteria-Churreria-San-Pedro/index.html)
 
 <p align="center">
   <a href="https://ferrannl.github.io/Cafeteria-Churreria-San-Pedro/index.html" title="Visit Cafeteria Churrerria San Pedro website">
