@@ -387,6 +387,7 @@ footer {
   font-size: 1.1rem;
 }
 
+/* language blocks */
 .lang {
   display: none;
 }
@@ -394,6 +395,7 @@ footer {
   display: block;
 }
 
+/* Language gate */
 .lang-gate-backdrop {
   position: fixed;
   inset: 0;
@@ -483,6 +485,38 @@ footer {
 .lang-gate-hint {
   font-size: 0.75rem;
   color: #777;
+}
+
+/* Menu image zoom cursor */
+.menu-image {
+  cursor: zoom-in;
+}
+
+/* Fullscreen image modal */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.image-modal--active {
+  display: flex;
+}
+
+.image-modal img {
+  max-width: 95vw;
+  max-height: 95vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  background: #fff;
+}
+
+.image-modal {
+  cursor: zoom-out;
 }
 
 @media (max-width: 800px) {
