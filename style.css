@@ -290,6 +290,30 @@ section p.lead {
   border: 0;
 }
 
+/* Separate big 360° block */
+.vr-wrapper {
+  margin-top: 1.5rem;
+}
+
+.vr-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--light);
+  box-shadow: var(--shadow);
+}
+
+/* Larger height than normal gallery iframes */
+.vr-frame--large {
+  height: 340px;
+}
+
+@media (max-width: 800px) {
+  .vr-frame--large {
+    height: 260px; /* a bit less tall on small screens */
+  }
+}
+
+
 .visit-grid {
   display: grid;
   grid-template-columns: minmax(0,1.2fr) minmax(0,1fr);
