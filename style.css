@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-  --bg: #f9f5f0;
-  --accent: #c27b48;
-  --accent-dark: #8b5429;
-  --text: #333333;
+  --bg: #f7faf7;
+  --accent: #739f6a;        /* ~ rgb(115,159,106) */
+  --accent-dark: #4f7249;   /* darker green */
+  --text: #263327;
   --light: #ffffff;
   --shadow: 0 10px 25px rgba(0,0,0,0.08);
   --radius: 18px;
@@ -37,7 +37,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(249,245,240,0.95);
+  background: rgba(247,250,247,0.96);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
@@ -121,11 +121,12 @@ select {
   gap: 0.4rem;
   padding: 0.2rem 0.75rem;
   border-radius: 999px;
-  background: rgba(194,123,72,0.1);
+  background: rgba(115,159,106,0.15);
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-bottom: 0.75rem;
+  color: #365437;
 }
 
 .hero-actions {
@@ -169,7 +170,7 @@ select {
 .btn-ghost:hover {
   border-color: var(--accent);
   color: var(--accent-dark);
-  background: rgba(194,123,72,0.05);
+  background: rgba(115,159,106,0.07);
 }
 
 .hero-image {
@@ -211,7 +212,7 @@ section h2 {
 
 section p.lead {
   font-size: 0.95rem;
-  color: #555;
+  color: #546154;
   margin-bottom: 1.2rem;
 }
 
@@ -280,7 +281,7 @@ section p.lead {
 .gallery-caption {
   padding: 0.5rem 0.8rem 0.7rem;
   font-size: 0.8rem;
-  color: #555;
+  color: #546154;
 }
 
 .vr-frame {
@@ -316,8 +317,8 @@ footer {
   padding: 1rem;
   text-align: center;
   font-size: 0.8rem;
-  color: #666;
-  background: #f2ebe4;
+  color: #546154;
+  background: #e2f0e2;
   margin-top: 2rem;
 }
 
@@ -360,7 +361,7 @@ footer {
 
 .menu-note {
   font-size: 0.78rem;
-  color: #777;
+  color: #6a766b;
   margin-top: 0.5rem;
 }
 
@@ -399,7 +400,7 @@ footer {
 .lang-gate-backdrop {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top, #ffe5c9 0, #f2d3b2 30%, #c27b48 85%, #8b5429 100%);
+  background: radial-gradient(circle at top, #e7f5ea 0, #cde7d5 30%, #739f6a 75%, #4f7249 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -426,7 +427,7 @@ footer {
   letter-spacing: .09em;
   font-size: 0.75rem;
   margin-bottom: 0.5rem;
-  color: #905331;
+  color: #365437;
 }
 
 .lang-gate-title {
@@ -436,7 +437,7 @@ footer {
 
 .lang-gate-sub {
   font-size: 0.9rem;
-  color: #555;
+  color: #546154;
   margin-bottom: 1.4rem;
 }
 
@@ -479,12 +480,12 @@ footer {
   transform: translateY(-1px);
   border-color: var(--accent);
   box-shadow: 0 16px 35px rgba(0,0,0,0.18);
-  background: #fff8f3;
+  background: #f3fff7;
 }
 
 .lang-gate-hint {
   font-size: 0.75rem;
-  color: #777;
+  color: #6a766b;
 }
 
 /* Menu image zoom cursor */
