@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <title>Cafetería Churrería San Pedro – El Sauzal, Tenerife</title>
@@ -21,7 +21,7 @@
     <div class="lang-gate-title">Choose your language</div>
     <div class="lang-gate-sub">
       Elige tu idioma · Wähle deine Sprache
-      <small>You can change it again in the top bar later.</small>
+      <small>Pulsa Esc para cerrar y usar Español por defecto.</small>
     </div>
     <div class="lang-gate-buttons">
       <button class="btn-lang" data-lang="en">
@@ -41,7 +41,7 @@
       </button>
     </div>
     <div class="lang-gate-hint">
-      Press <strong>Esc</strong> to close and use English by default.
+      Press <strong>Esc</strong> to close and use Spanish by default.
     </div>
   </div>
 </div>
@@ -51,7 +51,7 @@
     <div class="logo">Cafetería Churrería San Pedro</div>
 
     <div class="nav-center">
-      <nav class="nav-links nav-en">
+      <nav class="nav-links nav-en" style="display:none;">
         <a href="#about-en">About</a>
         <a href="#menu-en">Menu</a>
         <a href="#specialties-en">Specialties</a>
@@ -59,7 +59,7 @@
         <a href="#visit-en">Visit us</a>
       </nav>
 
-      <nav class="nav-links nav-es" style="display:none;">
+      <nav class="nav-links nav-es">
         <a href="#about-es">Sobre nosotros</a>
         <a href="#menu-es">Carta</a>
         <a href="#specialties-es">Especialidades</a>
@@ -79,8 +79,8 @@
     <div class="nav-right">
       <span>Language:</span>
       <select id="languageSelect" aria-label="Select language">
-        <option value="en" selected>English</option>
-        <option value="es">Español</option>
+        <option value="en">English</option>
+        <option value="es" selected>Español</option>
         <option value="de">Deutsch</option>
       </select>
     </div>
@@ -88,7 +88,7 @@
 </header>
 
 <!-- ENGLISH -->
-<div class="lang lang--active" data-lang="en">
+<div class="lang" data-lang="en">
   <section class="hero">
     <div class="hero-text">
       <div class="hero-badge">Since 1978 · El Sauzal, Tenerife</div>
@@ -408,7 +408,7 @@
 </div>
 
 <!-- ESPAÑOL -->
-<div class="lang" data-lang="es">
+<div class="lang lang--active" data-lang="es">
   <section class="hero">
     <div class="hero-text">
       <div class="hero-badge">Desde 1978 · El Sauzal, Tenerife</div>
