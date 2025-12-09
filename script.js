@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Language gate buttons
   gateButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const lang = btn.getAttribute('data-lang') || 'en';
+      const lang = btn.getAttribute('data-lang') || 'es';
       updateLanguage(lang);
       if (gate) {
         gate.classList.add('lang-gate-hidden');
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ESC key: close modal, then language gate (fallback to English)
+  // ESC key: close modal, then language gate (fallback to Spanish)
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       if (imageModal && imageModal.classList.contains('image-modal--active')) {
@@ -88,13 +88,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       if (gate && !gate.classList.contains('lang-gate-hidden')) {
         gate.classList.add('lang-gate-hidden');
-        updateLanguage('en');
+        updateLanguage('es');
       }
     }
   });
 
-  // Initial language from localStorage or default to EN
-  let initialLang = 'en';
+  // Initial language from localStorage or default to ES
+  let initialLang = 'es';
   try {
     const stored = localStorage.getItem('sanpedro_lang');
     if (stored === 'en' || stored === 'es' || stored === 'de') {
